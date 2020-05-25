@@ -1,5 +1,5 @@
 {
-  "name": "react-plaid-link",
+  "name": "@abartolo/react-plaid-link",
   "version": "3.0.0",
   "description": "A React component for Plaid Link",
   "files": [
@@ -14,7 +14,7 @@
   "browser": "dist/index.umd.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/plaid/react-plaid-link.git"
+    "url": "git+https://github.com/plaid/react-plaid-link.git"
   },
   "types": "dist/index.d.ts",
   "keywords": [
@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/plaid/react-plaid-link",
   "directories": {
-    "example": "examples"
+    "example": "examples",
+    "test": "test"
   },
   "scripts": {
     "lint": "eslint '{src,examples}/**/*.{ts,tsx,js,jsx}' --ignore-path .gitignore",
@@ -101,5 +102,6 @@
   "tags": [
     "react",
     "plaid"
-  ]
+  ],
+  "author": ""
 }

@@ -46,6 +46,9 @@ export const createPlaid = (options: PlaidLinkOptions) => {
   state.plaid = window.Plaid.create({
     ...config,
     onExit: (...params: any) => {
+      // This fixes issue with Plaid not exiting properly and calling onSuccess multiple times due to multiple instances
+      // Issue: https://github.com/plaid/react-plaid-link/pull/146/files
+      state.open = false;
       config.onExit && config.onExit(...params);
       state.onExitCallback && state.onExitCallback();
     },
